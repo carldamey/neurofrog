@@ -9,7 +9,10 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("NEUROFROG")
 
 # load images
-frog_img = pygame.image.load("img/")
+car_img = pygame.image.load("img/car.png")
+bg_img = pygame.image.load("img/background")
+frog_img = pygame.image.load("img/frog.png")
+road_img = pygame.image.load("img/road.png")
 
 run = True
 while run:
