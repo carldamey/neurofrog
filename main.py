@@ -3,7 +3,7 @@ from pygame.locals import *
 
 pygame.init()
 
-SCREEN_WIDTH = 960
+SCREEN_WIDTH = 1856
 SCREEN_HEIGHT = 960
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("NEUROFROG")
@@ -15,10 +15,10 @@ frog_img = pygame.image.load("img/frog.png")
 road_img = pygame.image.load("img/road.png")
 
 # define program variables
-TILE_SIZE = 48
+TILE_SIZE = 64
 
 def draw_grid():
-  for line in range(0,24):
+  for line in range(0,50):
     pygame.draw.line(screen, (255, 255, 255), (0, line * TILE_SIZE), (SCREEN_WIDTH,line * TILE_SIZE))
     pygame.draw.line(screen, (255, 255, 255), (line * TILE_SIZE, 0), (line * TILE_SIZE, SCREEN_HEIGHT))
 
@@ -26,7 +26,7 @@ run = True
 while run:
 
   screen.blit(bg_img, (0, 0))
-  screen.blit(frog_img, (448, 576))
+  screen.blit(frog_img, (0, 448))
 
   draw_grid()
 
@@ -41,3 +41,4 @@ pygame.quit()
 
 road = [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
 
+## TODO CONSIDER SCROLLING AND DIRECTIONAL MOVEMENT, REMEMBER TO HAVE MOVEMENT COOLDOWN THOUGH.
